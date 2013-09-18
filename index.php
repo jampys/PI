@@ -1,5 +1,5 @@
 <?php
-//escapar caracteres espciales.. 
+//escapar caracteres espciales.. !!!
 session_start();
 include('phps/acceso.php');
 

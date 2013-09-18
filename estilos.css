@@ -12,10 +12,11 @@
 	TEXT-DECORATION: none
 }
 .AplicantesControl
-{font-family:Verdana, Arial, Helvetica, sans-serif;
- font-size:11px;
- color:#FF0000;
- font-weight:600;
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#006699;
+	font-weight:600;
  }
 
 .AplicantesError
@@ -89,7 +90,7 @@ A.AplicantesLink2
 }
 A.AplicantesLink2:hover
 {
-	COLOR: #4093D6;
+	COLOR: #006699;
 	FONT-FAMILY: Verdana;
 	FONT-SIZE: 10px;
 	FONT-WEIGHT: bold;
@@ -417,7 +418,7 @@ a:link {
 	font-size: 11px;
 	font-style: normal;
 	font-weight: normal;
-	color: #CC0000;
+	color: #006699;
 	text-decoration: none;
 }
 a:hover {

@@ -1,22 +1,78 @@
 <html>
-    <head>
-        <title>Index</title>
-        <script type="text/javascript" language="javascript" src="public/js/funciones.js"></script>
-    </head>
-    <body onload="limpiar();">
+<head>
+    <title>Agregar nuevo usuario</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="public/css/estiloMenu.css">
+    <link type="text/css" rel="stylesheet" href="public/css/estilos.css">
+    <script type="text/javascript" language="javascript" src="public/js/funciones.js"></script> <!-- me conviene usar la ruta completa Conectar::ruta() -->
+</head>
 
-        <h1>Agregar usuarios</h1>
+<body onload="limpiar();">
+<div id="menu_marco">
+    <div id="menu_header">
+        <?php include("view/xheader.phtml")?>
+    </div>
 
-        <form name="form" action="" method="post" enctype="multipart/form-data"> <!--el action vacio para que al dar submit llame a la misma pagina. -->
-            Nombre: <input type="text" name="nom"><br/>
-            Correo: <input type="text" name="correo"><br/>
-            Login: <input type="text" name="login"><br/>
-            Password: <input type="password" name="pass"><br/>
-            Foto: <input type="file" name="foto"> (solo JPG)<br/>
+    <div id="menu_contenido">
 
-            <input type="hidden" name="grabar" value="si">
-            <a href="javascript:void(0)" onclick="document.form.submit();">Enviar</a>
-        </form>
+        <div id="menu_opciones">
+            <?php include("view/xopciones.phtml");?>
+        </div>
 
-    </body>
+        <div id="menu_cuerpo">
+            <h2 class="titulo">Nuevo usuario</h2>
+            <form class="formi" name="form" action="" method="post" enctype="multipart/form-data"> <!--el action vacio para que al dar submit llame a la misma pagina. -->
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><input type="text" name="nom"><br/></td>
+                    </tr>
+                    <tr>
+                        <td>Correo:</td>
+                        <td><input type="text" name="correo"></td>
+                    </tr>
+                    <tr>
+                        <td>Login:</td>
+                        <td><input type="text" name="login"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="pass"></td>
+                    </tr>
+                    <tr>
+                        <td>Foto:</td>
+                        <td><input type="file" name="foto"> (solo JPG)</td>
+                    </tr>
+                </table>
+
+                <input type="hidden" name="grabar" value="si">
+                <a href="javascript:void(0)" onclick="document.form.submit();">Enviar</a>
+            </form>
+
+        </div>
+
+        <div id="menu_usuario">
+            <?php include("view/xusuario.phtml");?>
+        </div>
+
+    </div>
+    <div id="menu_footer">
+        <?php include("view/xfooter.phtml");?>
+    </div>
+
+
+</div>
+
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

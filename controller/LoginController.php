@@ -7,11 +7,13 @@ if(isset($_SESSION["ses_id"]))
 
 require_once("model/userModel.php");
 $u=new Usuarios();
-if(isset($_POST["grabar"]) and $_POST["grabar"]=="si")
+
+
+/*if(isset($_POST["grabar"]) and $_POST["grabar"]=="si")
 {
     $u->logueo();
     exit;
-}
+}*/
 
 
 
@@ -20,22 +22,18 @@ if (isset($_POST['stage']) && 'validaUsuario' == $_POST['stage']&& isset($_POST[
     $id=$u->isAValidUser($_POST['USUARIO'],$_POST['PASWORD']);
 
     if($id>=1){
-        //$_SESSION["usuario"]=$id;
         $_SESSION["ses_id"]=$id;
         $_SESSION["foto"]=$_POST["USUARIO"];
-        //header("Location:controller/indexController.php");
         header("Location: ".Conectar::ruta()."?accion=index");
     }
     else
     {
         if($id=0){
             $_SESSION["error"]="USUARIO DESHABILITADO";
-            //header("Location:controller/errorController.php");
             header("Location: ".Conectar::ruta()."?accion=error");
         }
         if($id=-1){
             $_SESSION["error"]="DISCULPE, USUARIO O CONSTRASEÑA INVALIDOS";
-            //header("Location:controller/errorController.php");
             header("Location: ".Conectar::ruta()."?accion=error");
         }
     }

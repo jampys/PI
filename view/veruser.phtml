@@ -1,32 +1,69 @@
 <html>
     <head>
-        <title>Ver user</title>
+        <title>Ver usuarios</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="public/css/estiloMenu.css">
         <link type="text/css" rel="stylesheet" href="public/css/estilos.css">
         <script type="text/javascript" language="javascript" src="public/js/funciones.js"></script> <!-- me conviene usar la ruta completa Conectar::ruta() -->
     </head>
-    <body>
-        <h2>Ver usuarios</h2>
-        <table class="tablaDario">
-            <tr>
-                <th>Nombre</th>
-                <th>Password</th>
-                <th>Foto</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
-            </tr>
-            <?php for($i=0; $i<sizeof($datos); $i++){ ?>
-             <tr>
-                <td><?php echo $datos[$i]["nombre"]?></td>
-                <td><?php echo $datos[$i]["pass"]?></td>
-                <!-- <td><?php //echo $datos[$i]["foto"]?></td> -->
-                <td><img src="public/fotos/<?php echo $datos[$i]["foto"]?>" width="50" height="50"></td>
-                <td><a href="<?php Conectar::ruta(); ?>?accion=edituser&v=<?php echo $datos[$i]["id_usuario"] ?>"title="Editar datos de usuario <?php echo $datos[$i]["nombre"] ?>"> Editar</a></td>
-                <td><a href="#"title="Eliminar usuario <?php echo $datos[$i]["nombre"] ?>" onclick="eliminar('<?php Conectar::ruta(); ?>?accion=deleteuser&v=<?php echo $datos[$i]["id_usuario"] ?>');"> Eliminar</a></td>
-            </tr>
-            <?php
-            }
 
-            ?>
-        </table>
-    </body>
+    <body>
+    <div id="menu_marco">
+        <div id="menu_header">
+            <?php include("view/xheader.phtml")?>
+        </div>
+
+        <div id="menu_contenido">
+
+            <div id="menu_opciones">
+                <?php include("view/xopciones.phtml");?>
+            </div>
+
+            <div id="menu_cuerpo">
+                <h2 class="titulo">Ver usuarios</h2>
+                <table class="tablaPrueba">
+
+                    <col class="colNormal"/>
+                    <col class="colAncha"/>
+                    <col class="colNormal"/>
+                    <col class="colAngosta"/>
+                    <col class="colAngosta"/>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Foto</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                    <?php for($i=0; $i<sizeof($datos); $i++){ ?>
+                        <tr>
+                            <td><?php echo $datos[$i]["nombre"]?></td>
+                            <td><?php echo $datos[$i]["correo"]?></td>
+                            <!-- <td><?php //echo $datos[$i]["foto"]?></td> -->
+                            <td><img src="public/fotos/<?php echo $datos[$i]["foto"]?>" width="50" height="50"></td>
+                            <td align="middle"><a href="<?php Conectar::ruta(); ?>?accion=edituser&v=<?php echo $datos[$i]["id"] ?>"title="Editar datos de usuario <?php echo $datos[$i]["nombre"] ?>"> <img src="public/images/iconos/editar.png" width="30" height="30"/></a></td>
+                            <td align="middle"><a href="#"title="Eliminar usuario <?php echo $datos[$i]["nombre"] ?>" onclick="eliminar('<?php Conectar::ruta(); ?>?accion=deleteuser&v=<?php echo $datos[$i]["id_usuario"] ?>');"> <img src="public/images/iconos/borrar.png" width="30" height="30"/></a></td>
+                        </tr>
+                    <?php
+                    }
+
+                    ?>
+                </table>
+            </div>
+
+            <div id="menu_usuario">
+                <?php include("view/xusuario.phtml");?>
+            </div>
+
+        </div>
+        <div id="menu_footer">
+            <?php include("view/xfooter.phtml");?>
+        </div>
+
+
+    </div>
+
+</body>
 </html>
+
+

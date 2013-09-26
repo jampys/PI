@@ -11,7 +11,7 @@ session_start();
         }
 
         public static function ruta(){
-            return "http://localhost/sias1/";
+            return "http://localhost/sias2/";
         }
 
         public function comillas_inteligentes($valor){

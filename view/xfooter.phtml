@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="public/css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="public/css/estiloMenu.css">
+
+    <style type="text/css">
+
+        .footer{
+            background-color: #206A9B;
+            padding-top: 15px;
+        }
+
+        .footer .uni { font-family: Verdana, Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            color:#eeeeee;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 250px;
+        }
+
+        .footer .fecha{
+            margin-left: 20px;
+            font-family: verdana;
+            font-size: 18px;
+            color: seashell;
+        }
+        .footer .desarrolladores{
+            font-family: verdana;
+            font-size: 12px;
+            color: lightgray;
+            padding-left: 550px;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+<?php
+//parseo de FECHA....
+$a=date('y-m-d');
+$ar = split('[-:]',$a);
+$fecha= $ar[2].'/'.$ar[1].'/'.$ar[0];
+?>
+
+
+
+<div class="footer">
+    <span class="fecha"><?php echo $fecha ?> ©  2013</span>
+    <span class="uni">Universidad Nacional de la Patagonia Austral UARG -UACO</span><br/>
+    <span class="desarrolladores">desarollado por: Karim Hallar - Dario Picon</span>
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+

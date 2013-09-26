@@ -8,7 +8,7 @@ class Usuarios extends Conectar{
     }
 
     public function get_usuarios(){
-        $sql="select id, nombre, pass, foto from administrador;";
+        $sql="select id, nombre, correo, pass, foto from administrador;";
         $res=mysql_query($sql, parent::con());
         while($reg=mysql_fetch_assoc($res)){
             $this->user[]=$reg;
@@ -93,7 +93,7 @@ class Usuarios extends Conectar{
 
     public function get_usuarios_por_id(){
         parent::con();
-        $sql=sprintf("select * from usuarios2 where id_usuario=%s", parent::comillas_inteligentes($_GET["v"]));
+        $sql=sprintf("select * from administrador where id=%s", parent::comillas_inteligentes($_GET["v"]));
         $res=mysql_query($sql, parent::con());
         /*while($reg=mysql_fetch_assoc($res)){
             $this->user[]=$reg;
@@ -156,7 +156,7 @@ class Usuarios extends Conectar{
     public function salir()
     {
         session_destroy();
-        header("Location: ".Conectar::ruta()."?accion=index&m=3");exit;
+        header("Location: ".Conectar::ruta()."?accion=index");exit;
     }
 
     public function logueo(){

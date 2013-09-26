@@ -1,28 +1,80 @@
- <html>
-    <head>
-        <title>Editar usuario</title>
-        <script type="text/javascript" language="javascript" src="public/js/funciones.js"></script>
-    </head>
-    <body onload="limpiar();">
+<html>
+<head>
+    <title>Editar usuario</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="public/css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="public/css/estiloMenu.css">
+    <script type="text/javascript" language="javascript" src="public/js/funciones.js"></script>
+</head>
 
-        <?php include("menu.phtml"); ?>
-        <hr/>
-        <h1>Editar usuario</h1>
+<body onload="limpiar();">
+<div id="menu_marco">
+    <div id="menu_header">
+        <?php include("view/xheader.phtml");?>
+    </div>
 
-        <form name="form" action="" method="post" enctype="multipart/form-data"> <!--el action vacio para que al dar submit llame a la misma pagina. -->
-            Nombre: <input type="text" name="nom" value="<?php echo $datos["nombre"]?>"><br/>
-            Correo: <input type="text" name="correo" value="<?php echo $datos["correo"]?>"><br/>
-            Password: <input type="password" name="pass" value="<?php echo $datos["pass"]?>"><br/>
+    <div id="menu_contenido">
 
-            <img src="public/fotos/<?php echo $datos["foto"]?>" width="50" height="50"><br/>
-            Foto: <input type="file" name="foto"> (solo JPG)<br/> <br/>
+        <div id="menu_opciones">
+            <?php include("view/xopciones.phtml");?>
+        </div>
 
-            <input type="hidden" name="grabar" value="si">
-            <input type="hidden" name="id_usuario" value="<?php echo $_GET["v"]; ?>">
-            <input type="hidden" name="archivo" value="<?php echo $datos["foto"]; ?>">
-            <input type="hidden" name="login" value="<?php echo $datos["login"]; ?>">
-            <a href="javascript:void(0)" onclick="document.form.submit();">Enviar</a>
-        </form>
+        <div id="menu_cuerpo">
+            <h2 class="titulo">Editar usuario</h2>
 
-    </body>
+            <form class="formi" name="form" action="" method="post" enctype="multipart/form-data"> <!--el action vacio para que al dar submit llame a la misma pagina. -->
+                <table>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><input type="text" name="nom" value="<?php echo $datos["nombre"]?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Correo:</td>
+                        <td><input type="text" name="correo" value="<?php echo $datos["correo"]?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="pass" value="<?php echo $datos["pass"]?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Foto:</td>
+                        <td><img src="public/fotos/<?php echo $datos["foto"]?>" width="50" height="50"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="file" name="foto"> (solo JPG)<br/> <br/></td>
+                    </tr>
+                </table>
+
+
+
+                <input type="hidden" name="grabar" value="si">
+                <input type="hidden" name="id_usuario" value="<?php echo $_GET["v"]; ?>">
+                <input type="hidden" name="archivo" value="<?php echo $datos["foto"]; ?>">
+                <input type="hidden" name="login" value="<?php echo $datos["login"]; ?>">
+                <a href="javascript:void(0)" onclick="document.form.submit();">Enviar</a>
+            </form>
+        </div>
+
+        <div id="menu_usuario">
+            <?php include("view/xusuario.phtml");?>
+        </div>
+
+    </div>
+    <div id="menu_footer">
+        <?php include("view/xfooter.phtml");?>
+    </div>
+
+
+</div>
+
+
+
+</body>
 </html>
+
+
+
+
+
+

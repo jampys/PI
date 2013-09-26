@@ -1,0 +1,31 @@
+
+
+.Estilo1 {
+    color: #E51E25;
+    font-weight: bold;
+    font-size: 12px;
+}
+.AplicantesExplicacion {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 10px;
+}
+.ref {
+    font-family: Verdana, Geneva, sans-serif;
+}
+.ref {
+    font-size: 12px;
+    color: #FFF;
+}
+.ref {
+    font-weight: bold;
+}
+
+.blanco {
+    color: #FFF;
+}
+/*p {
+    text-align: justify;
+}*/
+.centro {
+    text-align: center;
+}

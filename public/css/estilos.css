@@ -1,50 +1,63 @@
 /* estilo del menu principal */
 #menu_marco{
-    border: 1px solid #d0d0d0;
-    height: 650px;
-    width: 1300px;
-    margin: 0px;
+    /*border: 1px solid #d0d0d0;*/
+    height: auto;
+    width: 1350px;
+    /*margin: auto;*/
+    padding: 0px;
+    clear: both;
 }
 
 #menu_header{
-    border: 1px solid #d0d0d0;
+    /*border: 1px solid #d0d0d0;*/
     height: 50px;
-    width: 1300px;
-    background-color: #006699;
+    width: 1350px;
+    background-color: #206A9B;
     margin: 0px;
 }
 
 #menu_contenido{
-    border: 1px solid #d0d0d0;
-    height: 500px;
-    width: 1300px;
+    /*border: 1px solid #d0d0d0;*/
+    /*height: 500px; */
+    width: 1350px;
+    min-height: 500px;
 }
     #menu_opciones{
-        border: 1px solid #d0d0d0;
+        background-color: #206A9B;
+        /*border: 1px solid #d0d0d0;*/
         height: 500px;
         width: 200px;
         float: left;
     }
     #menu_cuerpo{
-        border: 1px solid #d0d0d0;
+        /*border: 1px solid #d0d0d0;*/
         height: 500px;
-        width: 1000px;
+        width: 994px;
         float: left;
+        padding-left: 30px;
     }
     #menu_usuario{
-        border: 1px solid #d0d0d0;
+        /*border: 1px solid #d0d0d0;*/
         height: 500px;
-        width: 94px;
-        float: left;
+        width: 120px;
+        float: right;
     }
 
 #menu_footer{
     border: 1px solid #d0d0d0;
-    height: 100px;
-    width: 1300px;
+    height: 80px;
+    width: 1350px;
+    background-color: #206A9B;
+}
+
+#nombre_usuario{
+    font-family: verdana;
+    font-size: 20px;
+    color: #0000ff;
 }
 
 /*fin estilo menu principal */
+
 
 .tablaDario th{
     border: 1px solid black;
@@ -70,9 +83,10 @@
 
 .mostrar{
     font-family:Verdana, Arial, Helvetica, sans-serif;
-    font-size:11px;
+    font-size:10px;
     color:#006699;
     font-weight:600;
+    text-decoration: none;
 }
 
 .tablaDario td input{
@@ -88,4 +102,116 @@
     FONT-SIZE: 11px;
     TEXT-DECORATION: none
 }
+
+/*formularios */
+.formi{
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 13px;
+}
+    .formi td{
+        font-size: 13px;
+        font-weight: bold;
+        color: #798e94;
+    }
+
+.formi input[type="text"], .formi input[type="password"] {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #8E9BA9;
+    padding: 2px;}
+
+
+/*.formi input[type="submit"] {
+    background-color: #990000;
+    border: 4px solid #B34040;
+    color: #FFFFFF; }*/
+
+
+/* tablas*/
+
+.tablaPrueba{
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse:collapse;
+    border: 1px solid #000000;
+    width: 85px;
+    table-layout: fixed;
+}
+
+.tablaPrueba td{
+    font-size:13px;
+    border:1px solid #006699;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 20px;
+    width: 20px;
+}
+.tablaPrueba th{
+    font-size:15px;
+    border:1px solid #006699;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+.tablaPrueba th{
+    font-size:15px;
+    text-align:left;
+    background-color:#006699;
+    color:#ffffff;
+}
+
+.tablaPrueba.alt td{
+    color:#000000;
+    background-color:#EAF2D3;
+}
+
+.colAngosta{
+    width: 60px;
+}
+.colNormal{
+    width: 90px;
+}
+.colAncha{
+    width: 150px;
+}
+.colEnorme{
+    width: 370px;
+}
+
+.tablaPrueba tr:nth-child(odd){ background: #fcfcfc;}
+.tablaPrueba tr:nth-child(even){ background: #dbdbdb;}
+
+
+/*titulo de cada pagina */
+h2.titulo {
+    margin: 1em 0 0.5em 0;
+    font-weight: normal;
+    position: relative;
+    text-shadow: 0 -1px rgba(0,0,0,0.6);
+    font-size: 25px;
+    line-height: 40px;
+    background: #355681;
+    background: rgba(53,86,129, 0.8);
+    border: 1px solid #fff;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 0 10px 0 10px;
+    box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+    font-family: 'Muli', sans-serif;
+    width: 90%;
+}
+
+h3.subtitulo{
+    margin: 1em 0 0.5em 0;
+    font-weight: 600;
+    font-family: 'Titillium Web', sans-serif;
+    position: relative;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
+    font-size: 18px;
+    line-height: 40px;
+    color: #355681;
+    text-transform: uppercase;
+    /*border-bottom: 1px solid rgba(53,86,129, 0.3); */
+}
+
 

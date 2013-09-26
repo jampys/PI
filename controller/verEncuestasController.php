@@ -8,9 +8,8 @@ if (isset($_GET['stage']) && 'eliminar' == $_GET['stage']){
 	$enc=new Encuesta();
 	//REVISAR CUANDO HAY QUE ELIMINAR y CUANDO NO LA ENCUESTA (SI TIENE ASOCIADO PREGUNTAS O VARIABLES NO SE DEBERIA ELIMINAR
 	  
-	  if($enc->eliminar($id))
-	  {
-	  $mensaje='La Encuesta fue ELIMINADA con Exito';
+	  if($enc->eliminar($id)){
+	    $mensaje='La Encuesta fue ELIMINADA con Exito';
 	  }
 	  else
 		  {
@@ -19,7 +18,7 @@ if (isset($_GET['stage']) && 'eliminar' == $_GET['stage']){
 		  }
 	  
 		
-}//preciono cancelar orden	
+}
 
 $enc=new Encuesta();
 $encuestas=$enc->getEncuestas();

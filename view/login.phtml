@@ -3,58 +3,87 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Acceso | Sistema SIAS | UNPA </title>
+   <link rel="stylesheet" type="text/css" href="public/css/estilos.css">
     <style type="text/css">
-        <!--
+
         .texto {
             font-family: Verdana, Arial;
             font-size: 9pt;
             font-weight: bold;
             color: #666666;
-            text-decoration: none;
             text-align: center;
         }
-        .encabezado {
-            text-align: center;
-        }
-        .encabezado {
-            text-align: center;
-        }
-        -->
     </style>
 </head>
 
 <body>
-<form id="FormularioAcceso" name="FormularioAcceso" method="post" action="">
-    <p align="left" class="texto">&nbsp;</p>
-    <p align="left" class="texto">Ingresa tus datos para acceder al sistema </p>
-    <table width="432" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="f7f6f3">
-        <tr>
-            <td width="203" class="AplicantesTituloTab"><div align="left" class="texto">
-                    <div align="right"><strong>USUARIO:</strong></div>
-                </div></td>
-            <td width="6" class="AplicantesTituloTab">&nbsp;</td>
-            <td width="223"><label>
-                    <input name="USUARIO" type="text" id="USUARIO" size="25" maxlength="20" class="texto"/>
-                </label></td>
-        </tr>
-        <tr>
-            <td class="AplicantesTituloTab"><div align="left" class="texto">
-                    <div align="right"><strong>PASWORD:</strong></div>
-                </div></td>
-            <td class="AplicantesTituloTab">&nbsp;</td>
-            <td><label>
-                    <input name="PASWORD" type="password" id="PASWORD" size="25" maxlength="20" class="texto" />
-                    <input type="hidden" name="stage" value='validaUsuario' />
-                </label></td>
-        </tr>
-        <tr>
-            <td colspan="3"><label>
-                    <div align="center">
-                        <input type="submit" name="Submit" value="Ingresar"  class="texto"/>
-                    </div>
-                </label></td>
-        </tr>
-    </table>
-</form>
+
+<div id="menu_marco">
+    <div id="menu_header">
+        <?php include("view/xheader.phtml")?>
+    </div>
+
+    <div id="menu_contenido">
+
+        <div id="menu_opciones">
+
+        </div>
+
+        <div id="menu_cuerpo">
+
+            <br/>
+            <div class="texto">Ingresa tus datos para acceder al sistema</div>
+            <br/>
+
+            <form id="FormularioAcceso" name="FormularioAcceso" method="post" action="">
+
+                <table width="432" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="f7f6f3">
+
+                    <tr>
+                        <td width="203" class="AplicantesTituloTab"><div align="left" class="texto">
+                                <div align="right"><strong>USUARIO:</strong></div>
+                            </div></td>
+                        <td width="6" class="AplicantesTituloTab">&nbsp;</td>
+                        <td width="223"><label>
+                                <input name="USUARIO" type="text" id="USUARIO" size="25" maxlength="20" class="texto"/>
+                            </label></td>
+                    </tr>
+                    <tr>
+                        <td class="AplicantesTituloTab"><div align="left" class="texto">
+                                <div align="right"><strong>PASWORD:</strong></div>
+                            </div></td>
+                        <td class="AplicantesTituloTab">&nbsp;</td>
+                        <td><label>
+                                <input name="PASWORD" type="password" id="PASWORD" size="25" maxlength="20" class="texto" />
+                                <input type="hidden" name="stage" value='validaUsuario' />
+                            </label></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><label>
+                                <div align="center">
+                                    <input type="submit" name="Submit" value="Ingresar"  class="texto"/>
+                                </div>
+                            </label></td>
+                    </tr>
+                </table>
+            </form>
+
+
+        </div>
+
+        <div id="menu_usuario">
+
+        </div>
+
+    </div>
+    <div id="menu_footer">
+        <?php include("view/xfooter.phtml");?>
+    </div>
+
+
+</div>
+
 </body>
 </html>
+
+

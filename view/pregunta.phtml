@@ -1,22 +1,24 @@
 
-<table class="tablaDario" border="1px">
+<table class="tablaPrueba" border="1px">
+    <col class="colAngosta"/>
+    <col class="colEnorme"/>
+    <col class="colAngosta"/>
     <tr>
         <th>Numero</th>
         <th>Pregunta</th>
         <th>Agregar</th>
     </tr>
     <tr>
-        <td><input id="numero" type="text" size="10" name="numero"</td>
-        <td><input id="descripcion_pregunta" type="text" size="100" name="descripcion_pregunta"</td>
+        <td><input id="numero" type="text" size="2px" name="numero"</td>
+        <td><input id="descripcion_pregunta" type="text" size="54" name="descripcion_pregunta"</td>
         <td align="middle"><a href="javascript:void(0);" onclick="addPregunta('<?php echo $_POST['id']?>', 'ajax', '<?php echo Conectar::ruta()?>controller/preguntaController.php', 'add', null)">
-                <img src="public/images/iconos/add.gif" width="25" height="25"/>
+                <img src="public/images/iconos/add.png" width="25" height="25"/>
             </a>
         </td>
     </tr>
 </table>
 
-<hr>
-
+<br/>
 
 <?php
 
@@ -24,7 +26,11 @@ if(sizeof($datos)==0){
     echo "La encuesta aun no tiene asociada ninguna pregunta";
 }else{
     ?>
-    <table class="tablaDario" border="1px">
+    <table class="tablaPrueba" border="1px">
+        <col class="colAngosta"/>
+        <col class="colEnorme"/>
+        <col class="colAngosta"/>
+        <col class="colAngosta"/>
         <tr>
             <th>Numero</th>
             <th>Pregunta</th>
@@ -35,10 +41,10 @@ if(sizeof($datos)==0){
         foreach ($datos as $dato){
             ?>
             <tr>
-                <td><input id="num<?php echo $dato['id_pregunta']?>" type="text" size="10" name="numero" value="<?php echo $dato['numero']?>"</td>
-                <td><input id="des<?php echo $dato['id_pregunta']?>" type="text" size="100" name="descripcion_pregunta" value="<?php echo $dato['descripcion_pregunta']?>"</td>
+                <td><input id="num<?php echo $dato['id_pregunta']?>" type="text" size="2px" name="numero" value="<?php echo $dato['numero']?>"</td>
+                <td><input id="des<?php echo $dato['id_pregunta']?>" type="text" size="54px" name="descripcion_pregunta" value="<?php echo $dato['descripcion_pregunta']?>"</td>
                 <td align="middle"><a href="javascript:void(0);" onclick="updatePregunta('<?php echo $_POST['id']?>', 'ajax', '<?php echo Conectar::ruta()?>controller/preguntaController.php', 'update', '<?php echo $dato['id_pregunta']?>')"><img src="public/images/iconos/editar.png" width="25" height="25"/></a></td>
-                <td align="middle"><a href="javascript:void(0);" onclick="addPregunta('<?php echo $_POST['id']?>', 'ajax', '<?php echo Conectar::ruta()?>controller/preguntaController.php', 'delete', '<?php echo $dato['id_pregunta']?>')"><img src="public/images/iconos/borrar.gif" width="25" height="25"/></a></td>
+                <td align="middle"><a href="javascript:void(0);" onclick="addPregunta('<?php echo $_POST['id']?>', 'ajax', '<?php echo Conectar::ruta()?>controller/preguntaController.php', 'delete', '<?php echo $dato['id_pregunta']?>')"><img src="public/images/iconos/borrar.png" width="25" height="25"/></a></td>
             </tr>
 
         <?php

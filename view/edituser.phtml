@@ -1,0 +1,28 @@
+ <html>
+    <head>
+        <title>Editar usuario</title>
+        <script type="text/javascript" language="javascript" src="public/js/funciones.js"></script>
+    </head>
+    <body onload="limpiar();">
+
+        <?php include("menu.phtml"); ?>
+        <hr/>
+        <h1>Editar usuario</h1>
+
+        <form name="form" action="" method="post" enctype="multipart/form-data"> <!--el action vacio para que al dar submit llame a la misma pagina. -->
+            Nombre: <input type="text" name="nom" value="<?php echo $datos["nombre"]?>"><br/>
+            Correo: <input type="text" name="correo" value="<?php echo $datos["correo"]?>"><br/>
+            Password: <input type="password" name="pass" value="<?php echo $datos["pass"]?>"><br/>
+
+            <img src="public/fotos/<?php echo $datos["foto"]?>" width="50" height="50"><br/>
+            Foto: <input type="file" name="foto"> (solo JPG)<br/> <br/>
+
+            <input type="hidden" name="grabar" value="si">
+            <input type="hidden" name="id_usuario" value="<?php echo $_GET["v"]; ?>">
+            <input type="hidden" name="archivo" value="<?php echo $datos["foto"]; ?>">
+            <input type="hidden" name="login" value="<?php echo $datos["login"]; ?>">
+            <a href="javascript:void(0)" onclick="document.form.submit();">Enviar</a>
+        </form>
+
+    </body>
+</html>

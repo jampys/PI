@@ -1,0 +1,91 @@
+/* estilo del menu principal */
+#menu_marco{
+    border: 1px solid #d0d0d0;
+    height: 650px;
+    width: 1300px;
+    margin: 0px;
+}
+
+#menu_header{
+    border: 1px solid #d0d0d0;
+    height: 50px;
+    width: 1300px;
+    background-color: #006699;
+    margin: 0px;
+}
+
+#menu_contenido{
+    border: 1px solid #d0d0d0;
+    height: 500px;
+    width: 1300px;
+}
+    #menu_opciones{
+        border: 1px solid #d0d0d0;
+        height: 500px;
+        width: 200px;
+        float: left;
+    }
+    #menu_cuerpo{
+        border: 1px solid #d0d0d0;
+        height: 500px;
+        width: 1000px;
+        float: left;
+    }
+    #menu_usuario{
+        border: 1px solid #d0d0d0;
+        height: 500px;
+        width: 94px;
+        float: left;
+    }
+
+#menu_footer{
+    border: 1px solid #d0d0d0;
+    height: 100px;
+    width: 1300px;
+}
+
+/*fin estilo menu principal */
+
+.tablaDario th{
+    border: 1px solid black;
+    border-collapse:collapse;
+    background-color: darkgrey;
+
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:#006699;
+    font-weight:600;
+}
+
+.tablaDario td{
+    border: 1px solid black;
+    border-collapse:collapse;
+    background-color: mintcream;
+}
+
+.tablaDario table{
+    border: 1px solid black;
+    border-collapse:collapse;
+}
+
+.mostrar{
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:#006699;
+    font-weight:600;
+}
+
+.tablaDario td input{
+    COLOR: black;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 11px;
+    TEXT-DECORATION: none
+}
+
+.tablaDario td {
+    COLOR: black;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 11px;
+    TEXT-DECORATION: none
+}
+

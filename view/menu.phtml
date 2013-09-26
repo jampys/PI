@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>Menu</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="public/css/estilos.css">
+    <style type="text/css">
+        <!--
+        .Estilo1 {
+            color: #E51E25;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .AplicantesExplicacion {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 10px;
+        }
+        .ref {
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        .ref {
+            font-size: 12px;
+            color: #FFF;
+        }
+        .ref {
+            font-weight: bold;
+        }
+        a {
+            text-align: center;
+        }
+        .blanco {
+            color: #FFF;
+        }
+        p {
+            text-align: justify;
+        }
+        .centro {
+            text-align: center;
+        }
+        -->
+    </style>
+</head>
+<body>
+    <div id="menu_marco">
+        <div id="menu_header">
+            <h2>Menu principal SIAS</h2>
+        </div>
+
+        <div id="menu_contenido">
+
+            <div id="menu_opciones">
+                <ul>
+                    <li><a href="<?php echo Conectar::ruta();?>?accion=index" title="Home">Home</a> </li>
+                    <li><a href="<?php echo Conectar::ruta();?>?accion=veruser" title="Ver usuarios">Ver usuarios</a> </li>
+                    <li><a href="<?php echo Conectar::ruta();?>?accion=adduser" title="Agregar usuarios">Agregar usuarios</a> </li>
+                    <li><a href="<?php echo Conectar::ruta();?>?accion=encuesta" title="Nueva encuesta">Nueva encuesta</a> </li>
+                    <li><a href="<?php echo Conectar::ruta();?>?accion=verEncuestas" title="Ver encuestas">Ver encuestas</a> </li>
+                </ul>
+            </div>
+
+            <div id="menu_cuerpo">
+                <img src="public/images/iconos/editar.png" alt="" width="247" height="204" />
+            </div>
+
+            <div id="menu_usuario">
+                <div style="float: right">
+                    <img src="public/fotos/<?php echo $_SESSION["foto"]?>.jpg" width="75" height="75">
+                    <p><?php echo $_SESSION["foto"];?></p>
+                    <p><a href="<?php echo Conectar::ruta();?>?accion=salir">Cerrar Sesi&oacute;n</a></p>
+                </div>
+            </div>
+
+        </div>
+        <div id="menu_footer">
+            <?php
+            //parseo de FECHA....
+            $a=date('y-m-d');
+            $ar = split('[-:]',$a);
+            $fecha= $ar[2].'/'.$ar[1].'/'.$ar[0];
+            ?>
+
+            <table width="808" height="72" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                <tr bgcolor="#006699">
+                    <td height="37" colspan="7" align="center" valign="middle"><table width="800" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="412" align="left" valign="middle" class="ref"><?php echo $fecha ?> <span class="Estilo1">__</span> ©  2013</td>
+                                <td width="406" align="right" valign="middle" class="ref">UNIVERSIDAD NACIONAL DE LA PATAGONIA AUSTRAL  UARG -UACO</td>
+                            </tr>
+                        </table></td>
+                </tr>
+                <tr>
+                    <td height="24" colspan="7" align="center" valign="middle" class="AplicantesExplicacion"><span class="AplicantesExplicacion">desarollado por: Karim Hallar - Dario Picon</span></td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+</html>

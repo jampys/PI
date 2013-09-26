@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Ver user</title>
+        <link type="text/css" rel="stylesheet" href="public/css/estilos.css">
+        <script type="text/javascript" language="javascript" src="public/js/funciones.js"></script> <!-- me conviene usar la ruta completa Conectar::ruta() -->
+    </head>
+    <body>
+        <h2>Ver usuarios</h2>
+        <table class="tablaDario">
+            <tr>
+                <th>Nombre</th>
+                <th>Password</th>
+                <th>Foto</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+            <?php for($i=0; $i<sizeof($datos); $i++){ ?>
+             <tr>
+                <td><?php echo $datos[$i]["nombre"]?></td>
+                <td><?php echo $datos[$i]["pass"]?></td>
+                <!-- <td><?php //echo $datos[$i]["foto"]?></td> -->
+                <td><img src="public/fotos/<?php echo $datos[$i]["foto"]?>" width="50" height="50"></td>
+                <td><a href="<?php Conectar::ruta(); ?>?accion=edituser&v=<?php echo $datos[$i]["id_usuario"] ?>"title="Editar datos de usuario <?php echo $datos[$i]["nombre"] ?>"> Editar</a></td>
+                <td><a href="#"title="Eliminar usuario <?php echo $datos[$i]["nombre"] ?>" onclick="eliminar('<?php Conectar::ruta(); ?>?accion=deleteuser&v=<?php echo $datos[$i]["id_usuario"] ?>');"> Eliminar</a></td>
+            </tr>
+            <?php
+            }
+
+            ?>
+        </table>
+    </body>
+</html>

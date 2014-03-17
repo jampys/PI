@@ -1,4 +1,5 @@
 <?php
+//comenzamos a trabajar de nuevo MARZO 2014
 require_once("lib/config.php");
 require_once("lib/Conection.php");
 
